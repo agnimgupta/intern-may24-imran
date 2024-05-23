@@ -11,7 +11,11 @@ import {
 import Colors from "../Constants/Colors";
 import CustomTextInput from "../Routine/Components/CustomTextInput";
 import CustomDropDown from "../Routine/Components/CustomDropDown";
-
+import Description from "../Routine/Components/Description";
+import Octicons from "react-native-vector-icons/Octicons";
+import AddItemsCard from "../Routine/Components/AddItemsCard";
+import ProductCard from "../Routine/Components/ProductCard";
+import Ionicons from "react-native-vector-icons/Ionicons";
 const CreateNewRoutineScreen = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
@@ -43,7 +47,11 @@ const CreateNewRoutineScreen = () => {
   };
 
   return (
-    <ScrollView style={styles.ScrollContainer}>
+    <ScrollView
+      style={styles.ScrollContainer}
+      showsVerticalScrollIndicator={false}
+      
+    >
       <View style={styles.mainContainer}>
         <CustomTextInput />
         <View style={styles.subTextCont}>
@@ -53,7 +61,10 @@ const CreateNewRoutineScreen = () => {
         </View>
 
         <TouchableOpacity style={styles.uploadImageContainer}>
-          <Text>Upload Images</Text>
+          <Octicons name="image" size={40} />
+          <Text style={{ marginTop: 10, fontWeight: "500" }}>
+            Upload Images
+          </Text>
         </TouchableOpacity>
 
         <View style={styles.subTextCont}>
@@ -93,8 +104,82 @@ const CreateNewRoutineScreen = () => {
         </View>
         {/* SELECT FORM BELOW */}
         <View style={styles.CategorydropDown}>
-          <CustomDropDown label="Category"/>
+          <CustomDropDown label="Category" />
         </View>
+
+        <View style={styles.subTextCont}>
+          <Text style={styles.subText}>
+            Please select the category of your Routine.
+          </Text>
+        </View>
+
+        <View>
+          <Description />
+        </View>
+
+        <View style={styles.subTextCont}>
+          <Text style={styles.subText}>
+            Please select the category of your Routine.
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginBottom: 30,
+          }}
+        >
+          <View style={styles.DurationdropDown}>
+            <CustomDropDown label="Duration" />
+          </View>
+
+          <View style={styles.UnitdropDown}>
+            <CustomDropDown label="Unit" />
+          </View>
+        </View>
+        <View style={styles.addReminderContainer}>
+          <AddItemsCard
+            heading="Add Reminder Items"
+            subHeading="Please select the category of your Routine."
+          />
+        </View>
+        <View>
+          <ProductCard />
+        </View>
+
+        <TouchableOpacity style={styles.MoreRemainderContainer}>
+          <Text style={styles.MoreRemainderText}>More Reminder Items (2)</Text>
+          <Octicons name="chevron-right" size={20} />
+        </TouchableOpacity>
+
+        <View style={styles.addReminderContainer}>
+          <AddItemsCard
+            heading="Add Reminder Channels"
+            subHeading="We will notify you about your Routine using channels."
+          />
+        </View>
+        <View style={styles.supportingTextContainer}>
+          <Text style={styles.supportingText}>
+            This feature is avaibale only for patients using the routine{" "}
+          </Text>
+        </View>
+
+        <View style={styles.addReminderContainer}>
+          <AddItemsCard
+          
+            heading="Assign a Caregiver"
+            subHeading="We will keep updating caregiver about your Routine."
+          />
+        </View>
+        <View style={styles.supportingTextContainer}>
+          <Text style={styles.supportingText}>
+            This feature is avaibale only for patients using the routine{" "}
+          </Text>
+        </View>
+
+        <TouchableOpacity style={styles.btnStyle}>
+          <Text style={styles.btnText}>Proceed</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -108,10 +193,11 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     alignItems: "center",
+    paddingBottom:50,
   },
   subTextCont: {
     marginTop: 5,
-    marginBottom: 25,
+    marginBottom: 15,
     width: 342,
     height: 20,
   },
@@ -136,6 +222,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primaryTint2,
     alignItems: "center",
     justifyContent: "center",
+    borderStyle: "dashed",
   },
   container: {
     width: 340,
@@ -163,7 +250,7 @@ const styles = StyleSheet.create({
 
   CategorydropDown: {
     width: 342,
-    height: 55,
+    height: 56,
     borderWidth: 1,
     borderColor: "#D6D6D6",
     borderRadius: 18,
@@ -173,8 +260,20 @@ const styles = StyleSheet.create({
     marginTop: 28,
   },
   DurationdropDown: {
-    width: 342,
-    height: 55,
+    width: 197,
+    height: 56,
+    borderWidth: 1,
+    borderColor: "#D6D6D6",
+    borderRadius: 18,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 28,
+    marginRight: 10,
+  },
+  UnitdropDown: {
+    width: 131,
+    height: 56,
     borderWidth: 1,
     borderColor: "#D6D6D6",
     borderRadius: 18,
@@ -183,16 +282,56 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 28,
   },
-  UnitdropDown: {
-    width: 342,
-    height: 55,
-    borderWidth: 1,
-    borderColor: "#D6D6D6",
-    borderRadius: 18,
-    display: "flex",
+
+  addReminderContainer: {
+    marginBottom: 10,
+  },
+
+  ProductCardContainer: {},
+
+  MoreRemainderContainer: {
+    width: 335,
+    height: 19,
+    left: 5,
+    marginTop: 15,
+    marginBottom: 15,
     flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  MoreRemainderText: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#101018",
+    fontFamily: "Nunito",
+  },
+
+  supportingTextContainer: {
+    width: 322,
+    height: 16,
+    marginBottom: 15,
+  },
+  supportingText: {
+    fontSize: 12,
+    fontWeight: "600",
+  },
+
+  btnStyle: {
+    width: "100%",
+    height: 56,
+    borderRadius: 12,
+    justifyContent: "center",
     alignItems: "center",
-    marginTop: 28,
+    backgroundColor: Colors.primary100,
+    marginTop: 25,
+    marginBottom: 12,
+    paddingLeft: 10,
+    paddingRight: 10,
+  },
+
+  btnText: {
+    fontFamily: "SemiBold",
+    color: "white",
+    fontSize: 18,
   },
 });
 

@@ -10,8 +10,9 @@ import {
 import ProgressCard from "../Routine/Components/ProgressCard";
 import AssignRoutineCard from "../Routine/Components/AssignRoutineCard";
 import Colors from "../Constants/Colors";
-import { Icon, MD3Colors } from "react-native-paper";
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import ModalContent from "../Routine/Components/ModalContent"
+
 const RoutineScreen = ({navigation}) => {
   const [clicked, setClicked] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
@@ -80,7 +81,7 @@ const RoutineScreen = ({navigation}) => {
           style={styles.iconContainer}
           onPress={() => setModalVisible(true)}
         >
-          <Icon source="camera" color="white" size={20} />
+          <Ionicons name="add" color="white" size={20} />
         </TouchableOpacity>
       </View>
       {/* Floating Button */}
