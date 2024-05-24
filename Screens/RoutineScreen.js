@@ -10,10 +10,10 @@ import {
 import ProgressCard from "../Routine/Components/ProgressCard";
 import AssignRoutineCard from "../Routine/Components/AssignRoutineCard";
 import Colors from "../Constants/Colors";
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import ModalContent from "../Routine/Components/ModalContent"
+import Ionicons from "react-native-vector-icons/Ionicons";
+import ModalContent from "../Routine/Components/ModalContent";
 
-const RoutineScreen = ({navigation}) => {
+const RoutineScreen = ({ navigation }) => {
   const [clicked, setClicked] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
   return (
@@ -51,7 +51,9 @@ const RoutineScreen = ({navigation}) => {
           </TouchableOpacity>
         </View>
         <View>
-          <AssignRoutineCard />
+          <AssignRoutineCard
+            onPress={() => navigation.navigate("AssignDoctor")}
+          />
           <AssignRoutineCard />
           <AssignRoutineCard />
         </View>
@@ -68,8 +70,10 @@ const RoutineScreen = ({navigation}) => {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <ModalContent press={() => setModalVisible(!modalVisible)} OnCLick={({})=> navigation.navigate("CreateRoutine")} />
-            
+            <ModalContent
+              press={() => setModalVisible(!modalVisible)}
+              OnCLick={({}) => navigation.navigate("CreateRoutine")}
+            />
           </View>
         </View>
       </Modal>

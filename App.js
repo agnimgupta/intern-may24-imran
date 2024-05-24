@@ -5,7 +5,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./Screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import RoutineScreen from "./Screens/RoutineScreen";
-import CreateNewRoutineScreen from "./Screens/CreateNewRoutineScreen"
+import CreateNewRoutineScreen from "./Screens/CreateNewRoutineScreen";
+import AssignDoctorScreen from "./Screens/AssignDoctorScreen";
+import CustomHeader from "./ConstantComponets/CustomHeader";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -26,6 +28,11 @@ export default function App() {
           name="CreateRoutine"
           component={CreateNewRoutineScreen}
           options={{ title: "Create Routine" }}
+        />
+        <Stack.Screen
+          name="AssignDoctor"
+          component={AssignDoctorScreen}
+          options={{ header: (props) => <CustomHeader {...props} /> }}
         />
       </Stack.Navigator>
     </NavigationContainer>

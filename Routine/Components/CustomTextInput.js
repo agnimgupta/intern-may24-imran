@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View ,TextInput,Text} from "react-native";
+import { StyleSheet, View, TextInput, Text } from "react-native";
 
 const CustomTextInput = () => {
   return (
@@ -17,7 +17,7 @@ const CustomTextInput = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    width:342,
+    width: 342,
     height: 55,
     borderWidth: 1,
     borderColor: "#D6D6D6",
@@ -33,10 +33,13 @@ const styles = StyleSheet.create({
     paddingLeft: 14,
     color: "black",
     fontSize: 16,
+    fontFamily:'Nunito-Regular',
   },
   wordCount: {
     color: "#B6B6B6",
     fontSize: 10,
+    fontFamily: "Nunito-Light",
+
     flex: 1,
   },
   headingText: {
@@ -45,6 +48,9 @@ const styles = StyleSheet.create({
     left: 11,
     paddingHorizontal: 5,
     color: "#B6B6B6",
+    backgroundColor: "white",
+    fontFamily: "Nunito-Light",
+    fontSize: 12,
   },
 });
 

@@ -9,6 +9,7 @@ import {
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Colors from "../../Constants/Colors";
 import { Icon } from "react-native-paper";
+import MainButton from "../../ConstantComponets/MainButton";
 
 
 const ModalContent = ({ press ,OnCLick}) => {
@@ -31,12 +32,14 @@ const ModalContent = ({ press ,OnCLick}) => {
         ></Icon>
       </Pressable>
 
-      <TouchableOpacity
+      <View><MainButton onPress={OnCLick}/></View>
+
+      {/* <TouchableOpacity
         style={styles.btnStyle}
         onPress={OnCLick}
       >
         <Text style={styles.btnText}>Create New Routine</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
 
       <View style={{ marginTop: 10, marginBottom: 10, left: 10, width: 280 }}>
         <Text
@@ -94,24 +97,7 @@ const ModalContent = ({ press ,OnCLick}) => {
 export default ModalContent;
 
 const styles = StyleSheet.create({
-  btnStyle: {
-    width: "100%",
-    height: 56,
-    borderRadius: 12,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: Colors.primary100,
-    marginTop: 15,
-    marginBottom:12,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-
-  btnText: {
-    fontFamily: "SemiBold",
-    color: "white",
-    fontSize: 18,
-  },
+  
 
   subText: {
     fontFamily: "Nunito",

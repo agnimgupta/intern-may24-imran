@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   mainContainer: {
     width: 342,
     height: 178,
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: "#D6D6D6",
     borderRadius: 16,
     display: "flex",
@@ -52,21 +52,25 @@ const styles = StyleSheet.create({
     left: 11,
     paddingHorizontal: 5,
     color: "#B6B6B6",
+    backgroundColor: "white",
+    fontSize: 12,
+    fontWeight: "400",
+    fontFamily: "Nunito-Regular",
   },
 
   ContentContainer: {
     width: 314,
     height: 38,
-    marginBottom:5,
-    textAlign:'auto'
+    marginBottom: 5,
+    textAlign: "auto",
   },
 
   subText: {
-    // fontFamily: "Nunito",
+    fontFamily: "Nunito-Regular",
     color: Colors.neutrals800,
     fontWeight: "400",
     fontSize: 14,
-    color:'#1D1B20'
+    color: "#1D1B20",
   },
 });
 

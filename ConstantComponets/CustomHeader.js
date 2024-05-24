@@ -1,16 +1,16 @@
 import React from "react";
-import {
-  StyleSheet,
-  View,
-  Image,
-  Text,
-  TouchableOpacity,
-  Pressable,
-} from "react-native";
-import Colors from "../../Constants/Colors";
-const AssignRoutineCard = ({ onPress }) => {
+import { StyleSheet, View, Image, Text, TouchableOpacity } from "react-native";
+import Ionicons from "react-native-vector-icons/Ionicons";
+
+const CustomHeader = ({navigation}) => {
   return (
     <View style={styles.card}>
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.backButton}
+      >
+        <Ionicons name="arrow-back" size={24} color="black" />
+      </TouchableOpacity>
       <View style={styles.topContent}>
         <Image
           style={styles.avatar}
@@ -18,22 +18,12 @@ const AssignRoutineCard = ({ onPress }) => {
             uri: "https://s3-alpha-sig.figma.com/img/bf86/f72b/5c845f4632a24b416e1b7b4b9c009145?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PUehuWISfpUIPVotNr7c~Tlhhb36JQWRV0hKmp7Z1lQQcusi70Rr63jKhDFexhZADQVErGfok65U-rO~McH5Ky3AYcEORyD-CT8j422gB4iOcHzd09HZ~qxnxM5RAx9fACQ43K9nGRsHbEtHB54~n3EWZugL7Tv~5UKsYX6U7PhfS6MrSzIEiyp890sxYt6sFB~3wRtxeum1o9HIGhQPvA7A9cGrMSfMahVeyUQOIDCPvurzD7cuUvKq87YlJlC39CLZpZwoT6bqZ~r4g0SzB3PQbgCuKDnGCW-vId5KAg8iygYAiZ1Id5aHppzzdzjOsdUCp-njRVInvts046QLQQ__",
           }} // Replace with actual image source
         />
-        <View>
+        <View style={{}}>
           <Text style={styles.name}>Lorem ipsum</Text>
           <View style={{ flexDirection: "row" }}>
-            <Text>Concern:</Text>
             <Text style={styles.concern}>Migraine</Text>
           </View>
         </View>
-      </View>
-
-      <View style={styles.buttons}>
-        <TouchableOpacity style={styles.viewButton}>
-          <Text style={styles.viewButtonText}>View</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.assignButton} onPress={onPress}>
-          <Text style={styles.assignButtonText}>Assign Routine</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -41,18 +31,21 @@ const AssignRoutineCard = ({ onPress }) => {
 
 const styles = StyleSheet.create({
   card: {
-    borderWidth: 1,
-    borderColor: "#E8E8E8",
-    padding: 16,
-    marginTop: 16,
+    width: '100%',
+    height: 64,
+    flexDirection: "row",
     backgroundColor: "#fff",
-    borderRadius: 10,
+    alignItems: "center",
+    elevation:1
   },
   avatar: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+    width: 45,
+    height: 45,
+    borderRadius: 40,
     marginRight: 15,
+  },
+  backButton: {
+    marginLeft: 10,
   },
   info: {
     flex: 1,
@@ -61,39 +54,21 @@ const styles = StyleSheet.create({
   topContent: {
     flexDirection: "row",
     marginBottom: 10,
+    marginTop: 10,
+    marginLeft: 15,
   },
   name: {
     fontSize: 16,
     fontWeight: "500",
+    fontFamily:'Nunito-Bold'
+    
   },
   concern: {
+    
     fontSize: 14,
     color: "gray",
-    marginLeft: 5,
-  },
-  viewButton: {
-    marginRight: 16,
-  },
-  buttons: {
-    flexDirection: "row",
-    justifyContent: "flex-end",
-    alignItems: "center",
-  },
-
-  viewButtonText: {
-    fontSize: 16,
-  },
-  assignButton: {
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: Colors.primary100,
-  },
-  assignButtonText: {
-    fontSize: 16,
-    color: Colors.primary100,
+    fontFamily:'Nunito-Light'
   },
 });
 
-export default AssignRoutineCard;
+export default CustomHeader;
