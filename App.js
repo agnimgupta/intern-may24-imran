@@ -8,6 +8,7 @@ import RoutineScreen from "./Screens/RoutineScreen";
 import CreateNewRoutineScreen from "./Screens/CreateNewRoutineScreen";
 import AssignDoctorScreen from "./Screens/AssignDoctorScreen";
 import CustomHeader from "./ConstantComponets/CustomHeader";
+import AddReminderScreen from "./Screens/AddReminderScreen";
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -33,6 +34,11 @@ export default function App() {
           name="AssignDoctor"
           component={AssignDoctorScreen}
           options={{ header: (props) => <CustomHeader {...props} /> }}
+        />
+        <Stack.Screen
+          name="AddReminder"
+          component={AddReminderScreen}
+          options={{ title: "Add Reminder" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

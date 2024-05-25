@@ -21,7 +21,7 @@ const AssignRoutineCard = ({ onPress }) => {
         <View>
           <Text style={styles.name}>Lorem ipsum</Text>
           <View style={{ flexDirection: "row" }}>
-            <Text>Concern:</Text>
+            <Text style={styles.concernText}>Concern:</Text>
             <Text style={styles.concern}>Migraine</Text>
           </View>
         </View>
@@ -63,10 +63,20 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   name: {
+    fontFamily: "Nunito-SemiBold",
     fontSize: 16,
+    fontWeight: "600",
+  },
+  concernText: {
     fontWeight: "500",
+    fontFamily: "Nunito-Regular",
+    fontSize: 14,
+    color: Colors.primary100,
+    
   },
   concern: {
+    fontWeight: "500",
+    fontFamily: "Nunito-Regular",
     fontSize: 14,
     color: "gray",
     marginLeft: 5,
@@ -81,7 +91,9 @@ const styles = StyleSheet.create({
   },
 
   viewButtonText: {
-    fontSize: 16,
+    fontFamily:'Nunito-Medium',
+    fontWeight:'400',
+    fontSize: 14,
   },
   assignButton: {
     paddingVertical: 8,
@@ -91,7 +103,9 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary100,
   },
   assignButtonText: {
-    fontSize: 16,
+    fontFamily:'Nunito-Regular',
+    fontWeight:'400',
+    fontSize: 14,
     color: Colors.primary100,
   },
 });

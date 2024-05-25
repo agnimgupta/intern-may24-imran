@@ -10,7 +10,7 @@ const ProductCard = () => {
           style={styles.img}
           source={{
             uri: "https://s3-alpha-sig.figma.com/img/ca79/a101/f3dd61c66889f4114c63e74b665e5683?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b8zSUiHWed6cZnYZYL6K2DZCmRVSkjDlm~Nl0RRVWdJMHr1gGM6Qwbys9k6fuecbDpoFwGvUKR9kpFhx5TL0cB86yqn8myL2Wv3UVXJNlsizmGSQ10Fg4Ae2B9N~DwdP9Zg9HeszcaDDWJnrU~b4LWwjSA8eXcnyNYOfUOfajm963HpKcTXhZOF5HVDZyM4TxmS9Lp8Vc7XiywNM6tStAa4f4DL9LLTeCysRpPoEAYVGbhJciUNB4oRdBvC-lI5AC5ng4dcDi-fUQut2553bgM9s6XkXJF1SyEF2kU-xHzECf9TYLtmhR2I8iFOiwQOhgaJm5MkDz3bDBR5jmzVMwA__",
-          }} // Replace with actual image source
+          }}
         />
       </View>
 
@@ -19,7 +19,16 @@ const ProductCard = () => {
           <Text style={styles.headertext}>Amrutam Kunal Hair..</Text>
         </View>
         <View style={styles.edibleSign}>
-          <Text style={{ color: "#A0A0A0", fontSize: 14 }}>Consumable</Text>
+          <Text
+            style={{
+              color: "#A0A0A0",
+              fontSize: 14,
+              fontFamily: "Nunito-Regular",
+              fontWeight: "400",
+            }}
+          >
+            Consumable
+          </Text>
         </View>
         <TouchableOpacity>
           <Text style={styles.viewDetails}>View Details</Text>
@@ -68,11 +77,13 @@ const styles = StyleSheet.create({
   },
 
   viewDetails: {
+    fontFamily:"Nunito-SemiBold",
     color: Colors.primary100,
     fontWeight: "600",
     fontSize: 16,
   },
   headertext: {
+    fontFamily: "Nunito-SemiBold",
     fontWeight: "500",
     fontSize: 16,
   },

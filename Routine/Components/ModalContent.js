@@ -8,13 +8,12 @@ import {
 } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Colors from "../../Constants/Colors";
-import { Icon } from "react-native-paper";
+
 import MainButton from "../../ConstantComponets/MainButton";
 
-
-const ModalContent = ({ press ,OnCLick}) => {
+const ModalContent = ({ press, OnCLick }) => {
   return (
-    <View style={{ width: 320, }}>
+    <View style={{ width: 320 }}>
       <Pressable
         onPress={press}
         style={{
@@ -25,14 +24,16 @@ const ModalContent = ({ press ,OnCLick}) => {
           justifyContent: "flex-end",
         }}
       >
-        <Icon
+        <Ionicons
           name="close-circle-outline"
           size={39}
           color={"#3A643B"}
-        ></Icon>
+        ></Ionicons>
       </Pressable>
 
-      <View><MainButton onPress={OnCLick}/></View>
+      <View>
+        <MainButton onPress={OnCLick} ButtonTitle="Create New Routine" />
+      </View>
 
       {/* <TouchableOpacity
         style={styles.btnStyle}
@@ -49,7 +50,13 @@ const ModalContent = ({ press ,OnCLick}) => {
       </View>
 
       <View style={{ justifyContent: "center", alignItems: "center" }}>
-        <Text style={{ fontFamily: "Nunito", color:Colors.neutrals800, fontSize: 17 }}>
+        <Text
+          style={{
+            fontFamily: "Nunito",
+            color: Colors.neutrals800,
+            fontSize: 17,
+          }}
+        >
           OR
         </Text>
       </View>
@@ -60,9 +67,10 @@ const ModalContent = ({ press ,OnCLick}) => {
       >
         <Text
           style={{
-            fontFamily: "Nunito",
+            fontFamily: "Nunito-Medium",
+            fontWeight:'600',
             color: Colors.primary100,
-            fontSize: 18,
+            fontSize: 16,
           }}
         >
           Import From Templates
@@ -78,13 +86,21 @@ const ModalContent = ({ press ,OnCLick}) => {
         >{`\u25AA  Customize according to your need`}</Text>
       </View>
 
-      <View style={{ justifyContent: "center", alignItems: "center",marginBottom:12 }}>
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: 20,
+        }}
+      >
         <Text
           style={{
-            fontFamily: "Nunito",
+            fontFamily: "Nunito-Medium",
             color: Colors.neutrals800,
-            fontSize: 17,
+            fontWeight:'600',
+            fontSize: 16,
             textDecorationLine: "underline",
+            color:Colors.primary100
           }}
         >
           View sample templates
@@ -97,20 +113,19 @@ const ModalContent = ({ press ,OnCLick}) => {
 export default ModalContent;
 
 const styles = StyleSheet.create({
-  
-
   subText: {
-    fontFamily: "Nunito",
+    fontFamily: "Nunito-Regular",
+    fontWeight: "400",
     color: Colors.neutrals800,
-    fontSize: 15,
-    marginBottom:10,
+    fontSize: 14,
+    marginBottom: 10,
   },
 
   secBtn: {
     width: "100%",
     height: 56,
     borderRadius: 12,
-    marginBottom:12,
+    marginBottom: 12,
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 1,

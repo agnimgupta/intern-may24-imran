@@ -104,13 +104,15 @@ const styles = StyleSheet.create({
   },
 
   subHeaderText: {
+    fontFamily: "Nunito-Medium",
+    fontWeight: "500",
     fontSize: 16,
     marginBottom: 20,
   },
 
   seeMoreText: {
     color: Colors.primary100,
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "bold",
   },
 

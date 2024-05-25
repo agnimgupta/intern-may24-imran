@@ -16,7 +16,10 @@ import Octicons from "react-native-vector-icons/Octicons";
 import AddItemsCard from "../Routine/Components/AddItemsCard";
 import ProductCard from "../Routine/Components/ProductCard";
 import Ionicons from "react-native-vector-icons/Ionicons";
-const CreateNewRoutineScreen = () => {
+import MainButton from "../ConstantComponets/MainButton";
+import GreyOutAddItemsCard from "../Routine/Components/GreyOutAddItemsCard";
+
+const CreateNewRoutineScreen = ({ navigation }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
 
   const images = [
@@ -50,7 +53,6 @@ const CreateNewRoutineScreen = () => {
     <ScrollView
       style={styles.ScrollContainer}
       showsVerticalScrollIndicator={false}
-      
     >
       <View style={styles.mainContainer}>
         <CustomTextInput />
@@ -62,7 +64,14 @@ const CreateNewRoutineScreen = () => {
 
         <TouchableOpacity style={styles.uploadImageContainer}>
           <Octicons name="image" size={40} />
-          <Text style={{ marginTop: 10, fontWeight: "500" }}>
+          <Text
+            style={{
+              marginTop: 10,
+              fontWeight: "400",
+              fontFamily: "Nunito-SemiBold",
+              fontSize: 14,
+            }}
+          >
             Upload Images
           </Text>
         </TouchableOpacity>
@@ -104,7 +113,7 @@ const CreateNewRoutineScreen = () => {
         </View>
         {/* SELECT FORM BELOW */}
         <View style={styles.CategorydropDown}>
-          <CustomDropDown label="Category" />
+          <CustomDropDown label="Category" placeholder="Lifestyle"/>
         </View>
 
         <View style={styles.subTextCont}>
@@ -130,11 +139,11 @@ const CreateNewRoutineScreen = () => {
           }}
         >
           <View style={styles.DurationdropDown}>
-            <CustomDropDown label="Duration" />
+            <CustomDropDown label="Duration" placeholder="Six" />
           </View>
 
           <View style={styles.UnitdropDown}>
-            <CustomDropDown label="Unit" />
+            <CustomDropDown label="Unit" placeholder="Weeks"/>
           </View>
         </View>
         <View style={styles.addReminderContainer}>
@@ -143,7 +152,7 @@ const CreateNewRoutineScreen = () => {
             subHeading="Please select the category of your Routine."
           />
         </View>
-        <View>
+        <View style={{marginTop:15}}>
           <ProductCard />
         </View>
 
@@ -153,33 +162,39 @@ const CreateNewRoutineScreen = () => {
         </TouchableOpacity>
 
         <View style={styles.addReminderContainer}>
-          <AddItemsCard
+          <GreyOutAddItemsCard
             heading="Add Reminder Channels"
             subHeading="We will notify you about your Routine using channels."
           />
         </View>
         <View style={styles.supportingTextContainer}>
           <Text style={styles.supportingText}>
-            This feature is avaibale only for patients using the routine{" "}
+            This feature is available only for patients using the routine{" "}
           </Text>
         </View>
 
         <View style={styles.addReminderContainer}>
-          <AddItemsCard
-          
+          <GreyOutAddItemsCard
             heading="Assign a Caregiver"
             subHeading="We will keep updating caregiver about your Routine."
           />
         </View>
         <View style={styles.supportingTextContainer}>
           <Text style={styles.supportingText}>
-            This feature is avaibale only for patients using the routine{" "}
+          You are the default carer for this routine.{" "}
           </Text>
         </View>
 
-        <TouchableOpacity style={styles.btnStyle}>
+        <View style={styles.ButtonContainer}>
+          <MainButton
+            onPress={() => navigation.navigate("AddReminder")}
+            ButtonTitle="Proceed"
+          />
+        </View>
+
+        {/* <TouchableOpacity style={styles.btnStyle}>
           <Text style={styles.btnText}>Proceed</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
     </ScrollView>
   );
@@ -193,7 +208,7 @@ const styles = StyleSheet.create({
   },
   mainContainer: {
     alignItems: "center",
-    paddingBottom:50,
+    paddingBottom: 50,
   },
   subTextCont: {
     marginTop: 5,
@@ -203,12 +218,16 @@ const styles = StyleSheet.create({
   },
 
   subText: {
-    left: 10,
-    color: "#B6B6B6",
+    fontFamily: "Nunito-Regular",
+    fontWeight: "400",
+    left: 12,
+    color: "#A0A0A0",
   },
 
   subHeaderText: {
-    fontSize: 16,
+    fontFamily: "Nunito-Regular",
+    fontWeight: "400",
+    fontSize: 14,
     marginBottom: 10,
     right: 100,
   },
@@ -217,7 +236,7 @@ const styles = StyleSheet.create({
     width: 210,
     height: 210,
     borderRadius: 16,
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: "#D6D6D6",
     backgroundColor: Colors.primaryTint2,
     alignItems: "center",
@@ -284,7 +303,7 @@ const styles = StyleSheet.create({
   },
 
   addReminderContainer: {
-    marginBottom: 10,
+    
   },
 
   ProductCardContainer: {},
@@ -302,17 +321,19 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "500",
     color: "#101018",
-    fontFamily: "Nunito",
+    fontFamily: "Nunito-SemiBold",
   },
 
   supportingTextContainer: {
-    width: 322,
+    width: 335,
     height: 16,
-    marginBottom: 15,
+    marginBottom: 18
   },
   supportingText: {
+    fontFamily:'Nunito-Bold',
     fontSize: 12,
     fontWeight: "600",
+    
   },
 
   btnStyle: {
@@ -332,6 +353,10 @@ const styles = StyleSheet.create({
     fontFamily: "SemiBold",
     color: "white",
     fontSize: 18,
+  },
+  ButtonContainer: {
+    width: 335,
+    marginTop:25
   },
 });
 

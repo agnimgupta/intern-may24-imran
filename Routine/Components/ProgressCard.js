@@ -71,24 +71,24 @@ const styles = StyleSheet.create({
 
   titleTXT: {
     fontSize: 16,
-    fontWeight: "700",
-    fontFamily: "SemiBold",
+    fontWeight: "500",
+    fontFamily: "Nunito-SemiBold",
     marginBottom: 10,
     marginRight: 10,
   },
 
   subTXT: {
-    fontSize: 14,
-    fontWeight: "600",
+    fontSize: 12,
+    fontWeight: "400",
     color: "#A0A0A0",
-    fontFamily: "Nunito",
+    fontFamily: "Nunito-Medium",
   },
 
   progressText: {
-    fontSize: 12,
-    fontWeight: "600",
+    fontSize: 10,
+    fontWeight: "500",
     color: "#A0A0A0",
-    fontFamily: "Nunito",
+    fontFamily: "Nunito-Medium",
   },
 
   PBcontainer: {

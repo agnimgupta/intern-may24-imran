@@ -2,11 +2,11 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, View, Text } from "react-native";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import Colors from "../../Constants/Colors";
-const AddItemsCard = ({heading, subHeading,}) => {
+const GreyOutAddItemsCard = ({heading, subHeading,}) => {
   return (
     <TouchableOpacity style={styles.mainContainer}>
       <View style={styles.iconsConatiner}>
-        <Ionicons name="add" color={Colors.primary100} size={20} />
+        <Ionicons name="add" color='#A0A0A0' size={20} />
       </View>
       <View style={styles.contentContainer}>
         <Text style={styles.mainText}>{heading}</Text>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     width: 34,
     height: 34,
     borderWidth: 2,
-    borderColor: Colors.primary100,
+    borderColor: '#A0A0A0',
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     fontFamily:'Nunito-SemiBold',
     fontSize:14,
     fontWeight:'500',
-  color:Colors.primary100,
+  color:'#A0A0A0',
  
   },
 
@@ -66,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddItemsCard;
+export default GreyOutAddItemsCard;

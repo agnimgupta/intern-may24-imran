@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, View ,TextInput,Text} from "react-native";
 
-const CustomDropDown = ({label}) => {
+const CustomDropDown = ({label,placeholder}) => {
   return (
     <View >
       <TextInput
         style={styles.textInput}
-        placeholder="Add your question"
+        placeholder={placeholder}
         placeholderTextColor="black"
       />
       
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 5,
     color: "#B6B6B6",
     backgroundColor:'white',
-    fontFamily:'Nunito-Light',
+    fontFamily:'Nunito-Regular',
     fontSize:12,
   },
 });
