@@ -1,40 +1,43 @@
 import React from "react";
-import { StyleSheet, View ,TextInput,Text} from "react-native";
+import { StyleSheet, View, TextInput, Text } from "react-native";
 
-const CustomDropDown = ({label,placeholder}) => {
+const CustomDropDown = ({ label, placeholder }) => {
   return (
-    <View >
+    <View>
       <TextInput
         style={styles.textInput}
         placeholder={placeholder}
         placeholderTextColor="black"
       />
-      
+      {/* <View style={styles.textInput}>
+        <Text>{placeholder}</Text>
+      </View> */}
+
       <Text style={styles.labelText}>{label}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-//   mainContainer: {
-//     width:342,
-//     height: 55,
-//     borderWidth: 1,
-//     borderColor: "#D6D6D6",
-//     borderRadius: 18,
-//     display: "flex",
-//     flexDirection: "row",
-//     alignItems: "center",
-//     marginTop: 28,
-//   },
+  mainContainer: {
+    width: 342,
+    height: 55,
+    borderWidth: 1,
+    borderColor: "#D6D6D6",
+    borderRadius: 18,
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 28,
+  },
   textInput: {
     height: "100%",
     width: "100%",
     paddingLeft: 14,
     color: "black",
     fontSize: 16,
-    fontFamily:'Nunito-Regular',
-    fontWeight:'500'
+    fontFamily: "Nunito-Regular",
+    fontWeight: "500",
   },
   wordCount: {
     color: "#B6B6B6",
@@ -47,9 +50,9 @@ const styles = StyleSheet.create({
     left: 11,
     paddingHorizontal: 5,
     color: "#B6B6B6",
-    backgroundColor:'white',
-    fontFamily:'Nunito-Regular',
-    fontSize:12,
+    backgroundColor: "white",
+    fontFamily: "Nunito-Regular",
+    fontSize: 12,
   },
 });
 

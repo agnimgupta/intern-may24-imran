@@ -108,12 +108,21 @@ const CreateNewRoutineScreen = ({ navigation }) => {
               ]}
             >
               <Image source={{ uri: image.src }} style={styles.image} />
+              {selectedImageIndex === index && (
+                <View style={styles.iconContainer}>
+                  <Ionicons
+                    name="checkmark-circle"
+                    size={24}
+                    color={Colors.primary100}
+                  />
+                </View>
+              )}
             </TouchableOpacity>
           ))}
         </View>
         {/* SELECT FORM BELOW */}
         <View style={styles.CategorydropDown}>
-          <CustomDropDown label="Category" placeholder="Lifestyle"/>
+          <CustomDropDown label="Category" placeholder="Lifestyle" />
         </View>
 
         <View style={styles.subTextCont}>
@@ -143,7 +152,7 @@ const CreateNewRoutineScreen = ({ navigation }) => {
           </View>
 
           <View style={styles.UnitdropDown}>
-            <CustomDropDown label="Unit" placeholder="Weeks"/>
+            <CustomDropDown label="Unit" placeholder="Weeks" />
           </View>
         </View>
         <View style={styles.addReminderContainer}>
@@ -152,7 +161,7 @@ const CreateNewRoutineScreen = ({ navigation }) => {
             subHeading="Please select the category of your Routine."
           />
         </View>
-        <View style={{marginTop:15}}>
+        <View style={{ marginTop: 15 }}>
           <ProductCard />
         </View>
 
@@ -181,7 +190,7 @@ const CreateNewRoutineScreen = ({ navigation }) => {
         </View>
         <View style={styles.supportingTextContainer}>
           <Text style={styles.supportingText}>
-          You are the default carer for this routine.{" "}
+            You are the default carer for this routine.{" "}
           </Text>
         </View>
 
@@ -251,7 +260,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   imageContainer: {
-    padding: 1,
+    
     borderWidth: 2,
     borderColor: "transparent",
 
@@ -259,7 +268,7 @@ const styles = StyleSheet.create({
   },
   selectedImageContainer: {
     borderColor: Colors.primary100,
-    borderWidth: 2,
+    borderWidth: 2.5,
   },
   image: {
     width: 56,
@@ -302,9 +311,7 @@ const styles = StyleSheet.create({
     marginTop: 28,
   },
 
-  addReminderContainer: {
-    
-  },
+  addReminderContainer: {},
 
   ProductCardContainer: {},
 
@@ -327,13 +334,12 @@ const styles = StyleSheet.create({
   supportingTextContainer: {
     width: 335,
     height: 16,
-    marginBottom: 18
+    marginBottom: 18,
   },
   supportingText: {
-    fontFamily:'Nunito-Bold',
+    fontFamily: "Nunito-Bold",
     fontSize: 12,
     fontWeight: "600",
-    
   },
 
   btnStyle: {
@@ -356,7 +362,15 @@ const styles = StyleSheet.create({
   },
   ButtonContainer: {
     width: 335,
-    marginTop:25
+    marginTop: 25,
+  },
+  iconContainer: {
+    position: "absolute",
+    top: -11,
+    right: -12,
+    backgroundColor:'white',
+    borderRadius: 12,
+    
   },
 });
 

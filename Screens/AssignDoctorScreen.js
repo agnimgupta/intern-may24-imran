@@ -22,7 +22,7 @@ const AssignDoctorScreen = () => {
         />
       </View>
       <View style={styles.CustomDropDownContainer}>
-        <CustomDropDown label="Current Concerns" />
+        <CustomDropDown label="Current Concerns" placeholder="Knee Pain"/>
       </View>
 
       <View style={styles.ExplainTextInputContainer}>
