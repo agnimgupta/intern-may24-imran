@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TurboModuleRegistry, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "./Screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
@@ -10,7 +10,8 @@ import AssignDoctorScreen from "./Screens/AssignDoctorScreen";
 import CustomHeader from "./ConstantComponets/CustomHeader";
 import AddReminderScreen from "./Screens/AddReminderScreen";
 import ConsultationScreen from "./Screens/ConsultationScreen";
-
+import VideoCallScreen from "./Screens/VideoCallScreen";
+import CustomVideoCallHeader from "./VideoCallContainer/CustomVideoCallHeader"
 const Stack = createNativeStackNavigator();
 export default function App({ navigation }) {
   return (
@@ -67,6 +68,14 @@ export default function App({ navigation }) {
                 {...props}
               />
             ),
+          }}
+        />
+
+        <Stack.Screen
+          name="VideoCall"
+          component={VideoCallScreen}
+          options={{
+            header: (props) => <CustomVideoCallHeader {...props} />,
           }}
         />
       </Stack.Navigator>

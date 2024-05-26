@@ -5,15 +5,18 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Button
-        
         title="Route to Routine"
         onPress={() => navigation.navigate("Routine")}
       />
 
       <Button
-        
         title="Route to Consult"
         onPress={() => navigation.navigate("Consult")}
+      />
+
+      <Button
+        title="Route to VideoCall"
+        onPress={() => navigation.navigate("VideoCall")}
       />
     </View>
   );
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom:20
+    marginBottom: 20,
   },
 });
 
