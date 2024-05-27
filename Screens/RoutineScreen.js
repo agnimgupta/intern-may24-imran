@@ -54,8 +54,12 @@ const RoutineScreen = ({ navigation }) => {
           <AssignRoutineCard
             onPress={() => navigation.navigate("AssignDoctor")}
           />
-          <AssignRoutineCard />
-          <AssignRoutineCard />
+          <AssignRoutineCard
+            onPress={() => navigation.navigate("AssignDoctor")}
+          />
+          <AssignRoutineCard
+            onPress={() => navigation.navigate("AssignDoctor")}
+          />
         </View>
       </ScrollView>
       {/* MODAL */}
@@ -98,7 +102,6 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   ScrollContainer: {
-    flex: 1,
     padding: 20,
     backgroundColor: "white",
   },

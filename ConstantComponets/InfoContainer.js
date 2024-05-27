@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View ,Text} from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 const InfoContainer = () => {
   return (
@@ -19,13 +19,13 @@ const InfoContainer = () => {
 
 const styles = StyleSheet.create({
   InfoContainer: {
-    width: 314.74,
+    marginBottom: 10,
     height: 23,
     flexDirection: "row",
     top: 12,
   },
   InfoTextContainer: {
-    width: 283,
+    alignItems: "center",
     height: 23,
     marginLeft: 10,
   },

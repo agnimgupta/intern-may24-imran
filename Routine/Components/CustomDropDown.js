@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, View, TextInput, Text } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const CustomDropDown = ({ label, placeholder }) => {
+  const [clicked, setClicked] = useState(false);
   return (
-    <View>
-      <TextInput
+    <TouchableOpacity >
+      {/* <TextInput
         style={styles.textInput}
         placeholder={placeholder}
         placeholderTextColor="black"
-      />
-      {/* <View style={styles.textInput}>
+      /> */}
+      <View style={styles.textInput}>
         <Text>{placeholder}</Text>
-      </View> */}
+      </View>
+      {clicked ? (
+        <View style={styles.listContainer}>
+          <Text>Hello</Text>
+        </View>
+      ) : null}
 
       <Text style={styles.labelText}>{label}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -29,6 +36,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginTop: 28,
+  },
+  listContainer: {
+    position: "absolute",
+    width: 342,
   },
   textInput: {
     height: "100%",

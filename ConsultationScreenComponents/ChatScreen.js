@@ -128,11 +128,11 @@ const ChatScreen = () => {
 
       <RBSheet
         ref={refRBSheet}
-        height={300}
+        height={350}
         useNativeDriver={false}
         customStyles={{
           wrapper: {
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black background
+            backgroundColor: "rgba(0, 0, 0, 0.5)", 
           },
           container: {
             backgroundColor: "white",
@@ -168,6 +168,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   chatContainer: {
+    
+    flex:1,
     padding: 10,
   },
   yesterDayCont: {
@@ -188,8 +190,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 35,
+    
   },
   received: {
+    height:80,
     justifyContent: "flex-start",
   },
   sent: {
@@ -202,13 +206,16 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   messageText: {
+    maxwidth:"80%",
     backgroundColor: "#EAF2EA",
     borderRadius: 16,
-    padding: 10,
-    maxWidth: "100%",
+    paddingLeft:10,
+    paddingRight:10,
+    paddingTop:5,
+    paddingBottom:5,
     fontFamily: "Nunito-SemiBold",
     fontWeight: "500",
-    fontSize: 16,
+    fontSize: 14,
   },
   audio: {
     color: Colors.primary100,
@@ -249,8 +256,8 @@ const styles = StyleSheet.create({
   bottomSheetcont: {
     width: "100%",
     height: "100%",
-    paddingRight: 10,
-    paddingLeft: 10,
+    // paddingRight: 10,
+    // paddingLeft: 10,
     paddingTop: 10,
     paddingBottom: 20,
     alignItems:'center'

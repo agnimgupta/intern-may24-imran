@@ -2,23 +2,23 @@ import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MainButton from "../ConstantComponets/MainButton";
-const BottomSheetContent = () => {
+import InfoContainer from "../ConstantComponets/InfoContainer";
+const BottomSheetContent = ({ navigation }) => {
   return (
     <View>
-      <View style={{width:314, alignItems:'center', top:-10}}>
+      <View style={{ width: 314, alignItems: "center", top: -10 }}>
         <AntDesign name="minus" size={30} />
       </View>
-      <View style={styles.InfoTextContainer}>
-        <Text style={styles.InfoText}>
-          Well done! Consultation time is over 🎊
-        </Text>
+
+      <View >
+        <InfoContainer/>
       </View>
 
       <View>
         <MainButton
           ButtonTitle="Assign Routine"
           onPress={() => {
-            alert("No func added");
+            navigation.navigate("VideoToRoutine");
           }}
         />
       </View>
@@ -65,9 +65,8 @@ const styles = StyleSheet.create({
     top: 12,
   },
   InfoTextContainer: {
-    width: 283,
     height: 23,
-    marginLeft: 10,
+    // marginLeft: 10,
   },
   InfoText: {
     fontFamily: "Nunito-Regular",
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   secBtn: {
-    width: 314,
     height: 56,
     borderRadius: 12,
     marginBottom: 12,
@@ -88,7 +86,6 @@ const styles = StyleSheet.create({
   },
 
   LearnMoreCont: {
-    width: 314,
     height: 56,
     borderRadius: 12,
     marginBottom: 12,

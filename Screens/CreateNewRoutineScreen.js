@@ -18,9 +18,14 @@ import ProductCard from "../Routine/Components/ProductCard";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import MainButton from "../ConstantComponets/MainButton";
 import GreyOutAddItemsCard from "../Routine/Components/GreyOutAddItemsCard";
+import Dropdown from "../ConstantComponets/DropDown";
 
 const CreateNewRoutineScreen = ({ navigation }) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  const handleSelect = (item) => {
+    console.log("Selected item:", item);
+  };
 
   const images = [
     {
@@ -43,6 +48,12 @@ const CreateNewRoutineScreen = ({ navigation }) => {
       id: 5,
       src: "https://s3-alpha-sig.figma.com/img/9eff/ecd6/4db883ed7266e4cca5aa0902c8435298?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RtS2xKn4Y8zg861gbJNYx~2NcuY8MPEGEDXRvBLTiOyrh19vnc7-7WpX6jOfK6PF6Yk0whiUQSrdELC7HHYEpPiXC71KECscLTgLbgIXXK6qwRg5FZGdNSfzxgQJhcn0gd4r2uZnTb0mh85IUYsGed89Db0kh2f6-K2TfI0MtZqLWyClGQW8s8-9oQz0jvl4~N-biqx61UX0NhATDABrJuvwN7yKDhO4ubRse1qfSOMPpO2uh2oHAlDt7bV76SppNFiC5ngYl71Qvc~ljuuafV-h6l1Gvx79wEF8pMYL9dJeVnVXyuAF6UHRuGJF2yHfOJIVAJ79fCZ1vXt1Gy~HVw__",
     },
+  ];
+
+  const items = [
+    { label: "Item 1", value: "item1" },
+    { label: "Item 2", value: "item2" },
+    { label: "Item 3", value: "item3" },
   ];
 
   const handlePress = (index) => {
@@ -124,6 +135,8 @@ const CreateNewRoutineScreen = ({ navigation }) => {
         <View style={styles.CategorydropDown}>
           <CustomDropDown label="Category" placeholder="Lifestyle" />
         </View>
+
+       
 
         <View style={styles.subTextCont}>
           <Text style={styles.subText}>
@@ -210,6 +223,11 @@ const CreateNewRoutineScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   ScrollContainer: {
     flex: 1,
     padding: 15,
@@ -260,7 +278,6 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   imageContainer: {
-    
     borderWidth: 2,
     borderColor: "transparent",
 
@@ -368,9 +385,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: -11,
     right: -12,
-    backgroundColor:'white',
+    backgroundColor: "white",
     borderRadius: 12,
-    
   },
 });
 

@@ -5,7 +5,7 @@ import {
   Image,
   Text,
   TouchableOpacity,
-  Pressable,
+ 
 } from "react-native";
 import Colors from "../../Constants/Colors";
 const AssignRoutineCard = ({ onPress }) => {

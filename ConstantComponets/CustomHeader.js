@@ -12,7 +12,10 @@ const CustomHeader = ({ navigation, Name, Status, Img }) => {
         <Ionicons name="arrow-back" size={24} color="black" />
       </TouchableOpacity>
       <View style={styles.topContent}>
-        <Image style={styles.avatar} source={Img} />
+        <View style={styles.avatarCont}>
+          <Image style={styles.avatar} source={Img} />
+        </View>
+
         <View style={{}}>
           <Text style={styles.name}>{Name}</Text>
           <View style={{ flexDirection: "row" }}>
@@ -33,10 +36,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     elevation: 1,
   },
+  avatarCont: {
+    width: 45,
+    height: 45,
+    borderRadius: 40,
+    alignItems: "center",
+    marginRight: 15,
+  },
   avatar: {
     width: 45,
     height: 45,
     borderRadius: 40,
+    objectFit:'contain',
     marginRight: 15,
   },
   backButton: {
