@@ -55,7 +55,7 @@ const CreateNewRoutineScreen = ({ navigation }) => {
     { label: "Item 2", value: "item2" },
     { label: "Item 3", value: "item3" },
   ];
-
+  
   const handlePress = (index) => {
     setSelectedImageIndex(index);
   };
