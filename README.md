@@ -1,144 +1,79 @@
-# React Native CLI Project Setup
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-Welcome to the React Native CLI Project! This document will guide you through the steps required to set up the project on your system and run the code successfully.
+# Getting Started
 
-## Prerequisites
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-Before you begin, ensure you have the following installed on your system:
+## Step 1: Start the Metro Server
 
-- **Node.js** (version 14 or later)
-- **npm** (version 6 or later) or **Yarn** (version 1.22.10 or later)
-- **Watchman** (for macOS users)
-- **JDK** (Java Development Kit) - version 11 or later
-- **Android Studio** (for Android development)
-- **Xcode** (for iOS development, macOS only)
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
-### Installing Node.js and npm
+To start Metro, run the following command from the _root_ of your React Native project:
 
-You can download and install Node.js and npm from the [official Node.js website](https://nodejs.org/).
+```bash
+# using npm
+npm start
 
-### Installing Watchman (macOS only)
-
-Install Watchman using Homebrew:
-
-```sh
-brew install watchman
+# OR using Yarn
+yarn start
 ```
 
-### Installing JDK
+## Step 2: Start your Application
 
-You can download and install the JDK from the [AdoptOpenJDK website](https://adoptopenjdk.net/).
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-### Installing Android Studio
+### For Android
 
-Download and install Android Studio from the [official website](https://developer.android.com/studio).
+```bash
+# using npm
+npm run android
 
-### Installing Xcode (macOS only)
+# OR using Yarn
+yarn android
+```
 
-Download and install Xcode from the [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12).
+### For iOS
 
-## Setting Up the React Native CLI
+```bash
+# using npm
+npm run ios
 
-1. **Install React Native CLI globally:**
+# OR using Yarn
+yarn ios
+```
 
-   ```sh
-   npm install -g react-native-cli
-   ```
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
-2. **Initialize a new React Native project:**
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
-   ```sh
-   react-native init MyProject
-   ```
+## Step 3: Modifying your App
 
-3. **Navigate to the project directory:**
+Now that you have successfully run the app, let's modify it.
 
-   ```sh
-   cd MyProject
-   ```
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
 
-## Running the Project
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
 
-### Running on Android
+## Congratulations! :tada:
 
-1. **Start the Android emulator:**
+You've successfully run and modified your React Native App. :partying_face:
 
-   Open Android Studio, go to `AVD Manager`, and start an emulator.
+### Now what?
 
-2. **Run the React Native project:**
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-   ```sh
-   npx react-native run-android
-   ```
+# Troubleshooting
 
-### Running on iOS (macOS only)
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-1. **Start the iOS simulator:**
+# Learn More
 
-   Open Xcode, go to `Preferences` -> `Components` and install a simulator if necessary. Then, in the Xcode toolbar, select the desired simulator and start it.
+To learn more about React Native, take a look at the following resources:
 
-2. **Run the React Native project:**
-
-   ```sh
-   npx react-native run-ios
-   ```
-
-## Common Issues and Troubleshooting
-
-### Metro Bundler is stuck on loading
-
-- Ensure all instances of `node` are closed.
-- Restart the Metro Bundler:
-
-  ```sh
-  npx react-native start
-  ```
-
-### Error: Unable to load script from assets 'index.android.bundle'
-
-- Make sure your emulator is running.
-- Ensure the Android emulator is connected by running:
-
-  ```sh
-  adb devices
-  ```
-
-- If the device is not listed, restart the adb server:
-
-  ```sh
-  adb kill-server
-  adb start-server
-  ```
-
-### iOS build failed with error code 65
-
-- Open the project in Xcode:
-
-  ```sh
-  open ios/MyProject.xcworkspace
-  ```
-
-- Go to `Product` -> `Clean Build Folder`.
-- Rebuild the project.
-
-### Other Issues
-
-If you encounter other issues, refer to the [React Native documentation](https://reactnative.dev/docs/getting-started) for detailed guidance and troubleshooting steps.
-
-## Contributing
-
-If you want to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch`
-3. Make your changes and commit them: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature-branch`
-5. Submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Thank you for using the React Native CLI Project! If you have any questions or need further assistance, feel free to open an issue in the repository. Happy coding!
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.

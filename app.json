@@ -1,8 +1,4 @@
 {
-  "expo": {
-    "name": "amrutam_project",
-    "slug": "amrutam_project",
-    "version": "1.0.0"
-  },
-  "name": "amrutam_project"
+  "name": "amrutam_project",
+  "displayName": "amrutam_project"
 }
