@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   headingText: {
     position: "absolute",
-    top: -14,
+    top: -12,
     left: 11,
     paddingHorizontal: 5,
     color: "#B6B6B6",

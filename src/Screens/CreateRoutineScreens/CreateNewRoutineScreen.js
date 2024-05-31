@@ -18,13 +18,24 @@ import ProductCard from '../../CRComponents/ProductCard';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MainButton from '../../ConstantComponents/MainButton';
 import GreyOutAddReminderItem from '../../CRComponents/GreyOutAddReminderItem';
+import NewDropDown from '../../ConstantComponents/NewDropDown';
 
 const CreateNewRoutineScreen = ({navigation}) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const handleSelect = item => {
-    console.log('Selected item:', item);
+    setSelectedItem(item);
   };
+
+  const data = [
+    {label: 'Option 1', value: '1'},
+    {label: 'Option 2', value: '2'},
+    {label: 'Option 3', value: '3'},
+  ];
+  // const handleSelect = item => {
+  //   console.log('Selected item:', item);
+  // };
 
   const images = [
     {
@@ -128,7 +139,8 @@ const CreateNewRoutineScreen = ({navigation}) => {
         </View>
         {/* SELECT FORM BELOW */}
         <View style={styles.CategorydropDown}>
-          <CustomDropDown label="Category" placeholder="Lifestyle" />
+          {/* <CustomDropDown label="Category" placeholder="Lifestyle" /> */}
+          <NewDropDown data={data} onSelect={handleSelect} label="Category" placeholder="Lifestyle"/>
         </View>
 
         <View style={styles.subTextCont}>
@@ -153,11 +165,11 @@ const CreateNewRoutineScreen = ({navigation}) => {
             marginBottom: 30,
           }}>
           <View style={styles.DurationdropDown}>
-            <CustomDropDown label="Duration" placeholder="Six" />
+            <NewDropDown data={data} onSelect={handleSelect} label="Duration" placeholder="6"/>
           </View>
 
           <View style={styles.UnitdropDown}>
-            <CustomDropDown label="Unit" placeholder="Weeks" />
+            <NewDropDown data={data} onSelect={handleSelect} label="Unit" placeholder="Weeks"/>
           </View>
         </View>
         <View style={styles.addReminderContainer}>
@@ -287,36 +299,30 @@ const styles = StyleSheet.create({
 
   CategorydropDown: {
     width: 342,
-    height: 56,
-    borderWidth: 1,
-    borderColor: '#D6D6D6',
-    borderRadius: 18,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    height: 60,
     marginTop: 28,
   },
   DurationdropDown: {
     width: 197,
     height: 56,
-    borderWidth: 1,
-    borderColor: '#D6D6D6',
-    borderRadius: 18,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 28,
+    // borderWidth: 1,
+    // borderColor: '#D6D6D6',
+    // borderRadius: 18,
+    // display: 'flex',
+    // flexDirection: 'row',
+    // alignItems: 'center',
     marginRight: 10,
+    marginTop: 28,
   },
   UnitdropDown: {
     width: 131,
     height: 56,
-    borderWidth: 1,
-    borderColor: '#D6D6D6',
-    borderRadius: 18,
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    // borderWidth: 1,
+    // borderColor: '#D6D6D6',
+    // borderRadius: 18,
+    // display: 'flex',
+    // flexDirection: 'row',
+    // alignItems: 'center',
     marginTop: 28,
   },
 

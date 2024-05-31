@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
-import CustomDropDown from "../src/ConstantComponents/CustomDropDown";
-import Colors from "../src/Constants/Colors";
-import RadioButtons from "../src/CRComponents/RadioButtons";
+import CustomDropDown from "../ConstantComponents/CustomDropDown";
+import Colors from "../Constants/Colors";
+import RadioButtons from "../CRComponents/RadioButtons";
 
 const Step2 = () => {
   const [RBOption, setRBOption] = useState(null);

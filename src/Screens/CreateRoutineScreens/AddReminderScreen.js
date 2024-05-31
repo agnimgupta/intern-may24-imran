@@ -1,9 +1,9 @@
 // App.js
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
-import Step1 from '../../../AddReminderComponents/Step1';
-import Step2 from '../../../AddReminderComponents/Step2';
-import Step3 from '../../../AddReminderComponents/Step3';
+import Step1 from '../../AddReminderComponents/Step1';
+import Step2 from '../../AddReminderComponents/Step2';
+import Step3 from '../../AddReminderComponents/Step3';
 import Colors from '../../Constants/Colors';
 import MainButton from '../../ConstantComponents/MainButton';
 

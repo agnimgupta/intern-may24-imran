@@ -7,8 +7,8 @@ import {
   TextInput,
   Button,
 } from 'react-native';
-import CustomDropDown from '../src/ConstantComponents/CustomDropDown';
-import RadioButtons from '../src/CRComponents/RadioButtons';
+import CustomDropDown from '../ConstantComponents/CustomDropDown';
+import RadioButtons from '../CRComponents/RadioButtons';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 const Step3 = () => {

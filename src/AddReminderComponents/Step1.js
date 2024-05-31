@@ -1,7 +1,7 @@
 // SelectableCard.js
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
-import Colors from "../src/Constants/Colors";
+import Colors from "../Constants/Colors";
 
 const Step1 = () => {
   const [selectedOption, setSelectedOption] = useState(null);

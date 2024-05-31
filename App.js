@@ -9,6 +9,11 @@ import CreateNewRoutineScreen from './src/Screens/CreateRoutineScreens/CreateNew
 import AddReminderScreen from './src/Screens/CreateRoutineScreens/AddReminderScreen';
 import AssignRoutine from './src/Screens/RoutineScreen/AssignRoutine';
 import CustomHeader from './src/ConstantComponents/CustomHeader';
+import VideoToAssignRoutine from './src/Screens/ConsultationToAssignRoutine/VideoToAssignRoutine';
+import VideoToCreateRoutine from './src/Screens/ConsultationToAssignRoutine/VideoToCreateRoutine';
+import ChatScreen from './src/Screens/ConsultationToAssignRoutine/ChatScreen';
+import VideoCallScreen from './src/Screens/ConsultationToAssignRoutine/VideoCallScreen';
+import CustomVideoCallHeader from './src/ConstantComponents/CustomVideoCallHeader';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -54,6 +59,67 @@ const App = () => {
                   {...props}
                 />
               ),
+            }}
+          />
+
+          {/* ChatScreen */}
+          <Stack.Screen
+            name="ChatScreen"
+            component={ChatScreen}
+            options={{
+              header: props => (
+                <CustomHeader
+                  Name="Geetanjali Shah"
+                  Status="Online"
+                  Img={{
+                    uri: 'https://s3-alpha-sig.figma.com/img/91ba/cd31/e1e665c833197532a6cb8a1607eb2660?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kN1acw0G5bpyuW4Xl1OpTyyyoZmnmoMFYB9XK3IatoXPMmO-Z3gTOxyijINxMKQAQOLnA47Goi1IjLgNFYY2s4fEtd9tgbRJpmylNGnyzVJjEGJVLp1SaxRdFyQ19p02Aq5zRMXYF1qeMvC8YGpc8av6F6Uy~Kxkajge-PUjZ~CfBqa8LJzHcd07MH~DfEnu-Htkiy-nhnSRCACo3nGLJLTyhFgBf0BC3vCeKGJYKzPRUqCgMtDvq30lPRr0FqYzD8VgjPQ232zjpVMa0xZDYsR6yFO0od-XG1IFCSn7EBfEwb58dLnlVPo0mgHGTuY6Fv-aBLedZykZVQ38jzUDng__',
+                  }}
+                  {...props}
+                />
+              ),
+            }}
+          />
+
+          {/* VideoToAssignRoutine */}
+          <Stack.Screen
+            name="VideoToAssignRoutine"
+            component={VideoToAssignRoutine}
+            options={{
+              header: props => (
+                <CustomHeader
+                  Name="Geetanjali Shah"
+                  Status="Online"
+                  Img={{
+                    uri: 'https://s3-alpha-sig.figma.com/img/91ba/cd31/e1e665c833197532a6cb8a1607eb2660?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kN1acw0G5bpyuW4Xl1OpTyyyoZmnmoMFYB9XK3IatoXPMmO-Z3gTOxyijINxMKQAQOLnA47Goi1IjLgNFYY2s4fEtd9tgbRJpmylNGnyzVJjEGJVLp1SaxRdFyQ19p02Aq5zRMXYF1qeMvC8YGpc8av6F6Uy~Kxkajge-PUjZ~CfBqa8LJzHcd07MH~DfEnu-Htkiy-nhnSRCACo3nGLJLTyhFgBf0BC3vCeKGJYKzPRUqCgMtDvq30lPRr0FqYzD8VgjPQ232zjpVMa0xZDYsR6yFO0od-XG1IFCSn7EBfEwb58dLnlVPo0mgHGTuY6Fv-aBLedZykZVQ38jzUDng__',
+                  }}
+                  {...props}
+                />
+              ),
+            }}
+          />
+          {/* VideoToCreateRoutine */}
+          <Stack.Screen
+            name="VideoToCreateRoutine"
+            component={VideoToCreateRoutine}
+            options={{
+              header: props => (
+                <CustomHeader
+                  Name="Geetanjali Shah"
+                  Status="Online"
+                  Img={{
+                    uri: 'https://s3-alpha-sig.figma.com/img/91ba/cd31/e1e665c833197532a6cb8a1607eb2660?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kN1acw0G5bpyuW4Xl1OpTyyyoZmnmoMFYB9XK3IatoXPMmO-Z3gTOxyijINxMKQAQOLnA47Goi1IjLgNFYY2s4fEtd9tgbRJpmylNGnyzVJjEGJVLp1SaxRdFyQ19p02Aq5zRMXYF1qeMvC8YGpc8av6F6Uy~Kxkajge-PUjZ~CfBqa8LJzHcd07MH~DfEnu-Htkiy-nhnSRCACo3nGLJLTyhFgBf0BC3vCeKGJYKzPRUqCgMtDvq30lPRr0FqYzD8VgjPQ232zjpVMa0xZDYsR6yFO0od-XG1IFCSn7EBfEwb58dLnlVPo0mgHGTuY6Fv-aBLedZykZVQ38jzUDng__',
+                  }}
+                  {...props}
+                />
+              ),
+            }}
+          />
+          {/* VideoCall Screen */}
+          <Stack.Screen
+            name="VideoCall"
+            component={VideoCallScreen}
+            options={{
+              header: props => <CustomVideoCallHeader {...props} />,
             }}
           />
         </Stack.Navigator>
