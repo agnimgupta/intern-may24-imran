@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 import Colors from '../../Constants/Colors';
 import CustomTextInput from '../../ConstantComponents/CustomTextInput';
-import CustomDropDown from '../../ConstantComponents/CustomDropDown';
 import Description from '../../CRComponents/Description';
 import Octicons from 'react-native-vector-icons/Octicons';
 import AddReminderItems from '../../CRComponents/AddReminderItems';
@@ -305,24 +304,14 @@ const styles = StyleSheet.create({
   DurationdropDown: {
     width: 197,
     height: 56,
-    // borderWidth: 1,
-    // borderColor: '#D6D6D6',
-    // borderRadius: 18,
-    // display: 'flex',
-    // flexDirection: 'row',
-    // alignItems: 'center',
+    
     marginRight: 10,
     marginTop: 28,
   },
   UnitdropDown: {
     width: 131,
     height: 56,
-    // borderWidth: 1,
-    // borderColor: '#D6D6D6',
-    // borderRadius: 18,
-    // display: 'flex',
-    // flexDirection: 'row',
-    // alignItems: 'center',
+    
     marginTop: 28,
   },
 

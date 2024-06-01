@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import MainButton from "./MainButton";
 import InfoContainer from "./InfoContainer";
+
 const ChatBottomSheetContent = ({ navigation }) => {
   return (
     <View>
@@ -22,7 +23,7 @@ const ChatBottomSheetContent = ({ navigation }) => {
           }}
         />
       </View>
-
+  
       <TouchableOpacity
         onPress={() => alert("Functionality not added")}
         style={styles.secBtn}

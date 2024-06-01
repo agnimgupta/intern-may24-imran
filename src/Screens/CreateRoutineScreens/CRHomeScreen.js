@@ -20,19 +20,20 @@ const CRHomeScreen = ({navigation}) => {
     <View style={styles.MainContainer}>
       <ScrollView
         style={styles.ScrollContainer}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.contentContainer}>
         <Text style={styles.subHeaderText}>My Routine </Text>
 
         <View style={styles.progressContainer}>
           <ProgressCard
-            img={require('./../../assets/Images/mountain.jpg')}
+            img={require('../../../assets/Images/mountain.jpg')}
             title="Focus & Work"
             tltReminder="3 Reminder Items"
             progressText="40% Finished"
             progress={0.4}
           />
           <ProgressCard
-            img={require('./../../assets/Images/saloon.jpg')}
+            img={require('../../../assets/Images/saloon.jpg')}
             title="Skin Care"
             tltReminder="1 Reminder Items"
             progressText="70% Finished"
@@ -102,12 +103,16 @@ const styles = StyleSheet.create({
     padding: 20,
     backgroundColor: 'white',
   },
+  contentContainer: {
+    paddingBottom: 40, 
+  },
 
   subHeaderText: {
     fontFamily: 'Nunito-Medium',
     fontWeight: '500',
     fontSize: 16,
-    marginBottom: 20,
+    marginRight: 10,
+    color: 'black',
   },
 
   seeMoreText: {
@@ -119,11 +124,14 @@ const styles = StyleSheet.create({
   progressContainer: {
     flexDirection: 'row',
     marginBottom: 20,
+    marginTop: 15,
   },
 
   subHeadingContainer: {
+    alignItems: 'center',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    padding: 5,
   },
 
   container: {

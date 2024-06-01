@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito-Regular",
     fontSize: 14,
     fontWeight: "400",
+    color:'#101018'
   },
 });
 

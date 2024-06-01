@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito-Regular",
     fontSize: 16,
     fontWeight: "500",
+    color:'#101018'
   },
 
   InfoIcon: {

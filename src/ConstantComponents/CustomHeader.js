@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "500",
     fontFamily: "Nunito-Bold",
+    color:'#2E2F2E'
   },
   concern: {
     fontSize: 14,

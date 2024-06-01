@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito-SemiBold',
     fontSize: 16,
     fontWeight: '600',
+    color:'black'
   },
   concernText: {
     fontWeight: '500',
@@ -88,6 +89,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Nunito-Medium',
     fontWeight: '400',
     fontSize: 14,
+    color:'black'
   },
   assignButton: {
     paddingVertical: 8,
