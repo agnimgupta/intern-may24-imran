@@ -19,6 +19,7 @@ const Step3 = () => {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [confirmDate, setConfirmDate] = useState('');
 
   const handleSelect = item => {
     setSelectedItem(item);
@@ -29,6 +30,10 @@ const Step3 = () => {
     {label: 'Option 2', value: '2'},
     {label: 'Option 3', value: '3'},
   ];
+
+  const formatTime = date => {
+    return date.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+  };
 
   return (
     <View style={styles.container}>
@@ -59,7 +64,11 @@ const Step3 = () => {
       </View>
       <View>
         <TouchableOpacity style={styles.btnStyle} onPress={() => setOpen(true)}>
-          <Text style={styles.btnText}>Set Time</Text>
+          <Text style={styles.btnText}>
+            {confirmDate
+              ? `Time Set To : ${formatTime(confirmDate)}`
+              : 'Set Time'}
+          </Text>
         </TouchableOpacity>
 
         <DatePicker
@@ -69,7 +78,7 @@ const Step3 = () => {
           mode="time"
           onConfirm={date => {
             setOpen(false);
-            setDate(date);
+            setConfirmDate(date);
           }}
           onCancel={() => {
             setOpen(false);
@@ -77,9 +86,10 @@ const Step3 = () => {
         />
       </View>
 
-      <View style={{marginTop:15}}>
+      <View style={{marginTop: 15}}>
         <AddReminderItems heading="Add more slots" subHeading=" " />
       </View>
+
     </View>
   );
 };

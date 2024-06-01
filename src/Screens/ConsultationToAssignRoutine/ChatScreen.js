@@ -52,7 +52,7 @@ const ChatScreen = () => {
           }}
         />
       )}
-      <View style={{ width: 192, height: 58 }}>
+      <View style={{ width: 192, height: 58, paddingRight:10 }}>
         {item.text && <Text style={styles.messageText}>{item.text}</Text>}
         {item.Time && (
           <Text
@@ -61,6 +61,7 @@ const ChatScreen = () => {
               fontWeight: "400",
               fontSize: 12,
               textAlign: "right",
+              color:'#A0A0A0'
             }}
           >
             {item.Time}
@@ -110,6 +111,7 @@ const ChatScreen = () => {
             value={inputText}
             onChangeText={setInputText}
             placeholder="Type your message"
+            placeholderTextColor="#A0A0A0"
           />
           <View>
             <Ionicons name="add" size={20} color={Colors.primary100} />
@@ -166,9 +168,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     alignItems: "center",
+    backgroundColor:"#F4F4F4"
   },
   chatContainer: {
-    
     flex:1,
     padding: 10,
   },
@@ -216,6 +218,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito-SemiBold",
     fontWeight: "500",
     fontSize: 14,
+    color:'#0C0C0C'
   },
   audio: {
     color: Colors.primary100,
@@ -235,6 +238,7 @@ const styles = StyleSheet.create({
     height: 56,
     borderRadius: 16,
     backgroundColor: Colors.neutrals100,
+    marginRight:10
   },
   input: {
     padding: 10,

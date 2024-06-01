@@ -11,6 +11,7 @@ import {
 import Colors from '../../Constants/Colors';
 import CustomTextInput from '../../ConstantComponents/CustomTextInput';
 import Description from '../../CRComponents/Description';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 import AddReminderItems from '../../CRComponents/AddReminderItems';
 import ProductCard from '../../CRComponents/ProductCard';
@@ -82,15 +83,16 @@ const CreateNewRoutineScreen = ({navigation}) => {
         </View>
 
         <TouchableOpacity style={styles.uploadImageContainer}>
-          <Octicons name="image" size={40} />
+          <EvilIcons name="image" size={60} color="#000000"/>
           <Text
             style={{
               marginTop: 10,
               fontWeight: '400',
-              fontFamily: 'Nunito-SemiBold',
+              fontFamily: 'Nunito-Medium',
               fontSize: 14,
+              color:'#000000'
             }}>
-            Upload Images
+            Upload Image
           </Text>
         </TouchableOpacity>
 

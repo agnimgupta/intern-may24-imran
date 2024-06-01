@@ -21,7 +21,7 @@ const PreBuildRoutineCard = ({ img, title, tltReminder }) => {
 
         <View style={{ height: 14, flexDirection:'row', alignItems:'center' }}>
           <View style={styles.iconCont}>
-            <Ionicons name="calendar-outline" size={14}/>
+            <Ionicons name="calendar-outline" size={14} color="#A0A0A0"/>
           </View>
           <View style={{alignItems:'center', }}>
             <Text style={styles.ContentText}>12 Weeks</Text>
@@ -30,7 +30,7 @@ const PreBuildRoutineCard = ({ img, title, tltReminder }) => {
 
         <View style={{ height: 14, flexDirection:'row', alignItems:'center' }}>
           <View style={styles.iconCont}>
-            <Ionicons name="list" size={14}/>
+            <Ionicons name="list" size={14} color="#A0A0A0"/>
           </View>
           <View style={{alignItems:'center', }}>
             <Text style={styles.ContentText}>3 Reminder Items</Text>
@@ -39,7 +39,7 @@ const PreBuildRoutineCard = ({ img, title, tltReminder }) => {
         
         <View style={{ height: 14, flexDirection:'row', alignItems:'center' }}>
           <View style={styles.iconCont}>
-            <Ionicons name="bulb-outline" size={14}/>
+            <Ionicons name="bulb-outline" size={14} color="#A0A0A0"/>
           </View>
           <View style={{alignItems:'center', }}>
             <Text style={styles.ContentText}>by you</Text>
