@@ -62,6 +62,17 @@ const CRHomeScreen = ({navigation}) => {
           />
         </View>
       </ScrollView>
+
+      {/* Floating Button */}
+      <View style={styles.fab}>
+        <TouchableOpacity
+          style={styles.iconContainer}
+          onPress={() => setModalVisible(true)}>
+          <Ionicons name="add" color="white" size={20} />
+        </TouchableOpacity>
+      </View>
+      {/* Floating Button */}
+
       {/* MODAL */}
       <Modal
         animationType="fade"
@@ -75,22 +86,15 @@ const CRHomeScreen = ({navigation}) => {
           <View style={styles.modalView}>
             <ModalContent
               press={() => setModalVisible(!modalVisible)}
-              OnCLick={({}) => navigation.navigate('CreateNewRoutine')}
+              OnCLick={({}) => [
+                navigation.navigate('CreateNewRoutine'),
+                setModalVisible(!modalVisible),
+              ]}
             />
           </View>
         </View>
       </Modal>
       {/* MODAL */}
-
-      {/* Floating Button */}
-      <View style={styles.fab}>
-        <TouchableOpacity
-          style={styles.iconContainer}
-          onPress={() => setModalVisible(true)}>
-          <Ionicons name="add" color="white" size={20} />
-        </TouchableOpacity>
-      </View>
-      {/* Floating Button */}
     </View>
   );
 };
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   contentContainer: {
-    paddingBottom: 40, 
+    paddingBottom: 40,
   },
 
   subHeaderText: {

@@ -19,10 +19,12 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import MainButton from '../../ConstantComponents/MainButton';
 import GreyOutAddReminderItem from '../../CRComponents/GreyOutAddReminderItem';
 import NewDropDown from '../../ConstantComponents/NewDropDown';
+import DocumentPicker from 'react-native-document-picker';
 
 const CreateNewRoutineScreen = ({navigation}) => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
+  const [selectedImageUri, setSelectedImageUri] = useState(null);
 
   const handleSelect = item => {
     setSelectedItem(item);
@@ -33,9 +35,6 @@ const CreateNewRoutineScreen = ({navigation}) => {
     {label: 'Option 2', value: '2'},
     {label: 'Option 3', value: '3'},
   ];
-  // const handleSelect = item => {
-  //   console.log('Selected item:', item);
-  // };
 
   const images = [
     {
@@ -70,6 +69,20 @@ const CreateNewRoutineScreen = ({navigation}) => {
     setSelectedImageIndex(index);
   };
 
+  const SelectImg = async () => {
+    try {
+      const Img = await DocumentPicker.pickSingle({
+        type: [DocumentPicker.types.images],
+      });
+      console.log(Img);
+      setSelectedImageUri(Img.uri);
+    } catch (err) {
+      if (DocumentPicker.isCancel(err))
+        console.log('User Cancelled The upload', err);
+      else console.log(err);
+    }
+  };
+
   return (
     <ScrollView
       style={styles.ScrollContainer}
@@ -82,18 +95,24 @@ const CreateNewRoutineScreen = ({navigation}) => {
           </Text>
         </View>
 
-        <TouchableOpacity style={styles.uploadImageContainer}>
-          <EvilIcons name="image" size={60} color="#000000"/>
-          <Text
-            style={{
-              marginTop: 10,
-              fontWeight: '400',
-              fontFamily: 'Nunito-Medium',
-              fontSize: 14,
-              color:'#000000'
-            }}>
-            Upload Image
-          </Text>
+        <TouchableOpacity
+          style={styles.uploadImageContainer}
+          onPress={SelectImg}>
+          {selectedImageUri ? (
+            <View>
+              <Image
+                source={{uri: selectedImageUri}}
+                style={styles.uploadImageContainer}
+              />
+            </View>
+          ) : (
+            <View>
+              <View style={{alignItems: 'center'}}>
+                <EvilIcons name="image" size={60} color="#000000" />
+              </View>
+              <Text style={styles.uploadImageText}>Upload Image</Text>
+            </View>
+          )}
         </TouchableOpacity>
 
         <View style={styles.subTextCont}>
@@ -141,7 +160,12 @@ const CreateNewRoutineScreen = ({navigation}) => {
         {/* SELECT FORM BELOW */}
         <View style={styles.CategorydropDown}>
           {/* <CustomDropDown label="Category" placeholder="Lifestyle" /> */}
-          <NewDropDown data={data} onSelect={handleSelect} label="Category" placeholder="Lifestyle"/>
+          <NewDropDown
+            data={data}
+            onSelect={handleSelect}
+            label="Category"
+            placeholder="Lifestyle"
+          />
         </View>
 
         <View style={styles.subTextCont}>
@@ -166,11 +190,21 @@ const CreateNewRoutineScreen = ({navigation}) => {
             marginBottom: 30,
           }}>
           <View style={styles.DurationdropDown}>
-            <NewDropDown data={data} onSelect={handleSelect} label="Duration" placeholder="6"/>
+            <NewDropDown
+              data={data}
+              onSelect={handleSelect}
+              label="Duration"
+              placeholder="6"
+            />
           </View>
 
           <View style={styles.UnitdropDown}>
-            <NewDropDown data={data} onSelect={handleSelect} label="Unit" placeholder="Weeks"/>
+            <NewDropDown
+              data={data}
+              onSelect={handleSelect}
+              label="Unit"
+              placeholder="Weeks"
+            />
           </View>
         </View>
         <View style={styles.addReminderContainer}>
@@ -218,10 +252,6 @@ const CreateNewRoutineScreen = ({navigation}) => {
             ButtonTitle="Proceed"
           />
         </View>
-
-        {/* <TouchableOpacity style={styles.btnStyle}>
-          <Text style={styles.btnText}>Proceed</Text>
-        </TouchableOpacity> */}
       </View>
     </ScrollView>
   );
@@ -275,6 +305,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderStyle: 'dashed',
   },
+  uploadImageText: {
+    marginTop: 10,
+    fontWeight: '400',
+    fontFamily: 'Nunito-Medium',
+    fontSize: 14,
+    color: '#000000',
+  },
   container: {
     width: 340,
     flexDirection: 'row',
@@ -306,14 +343,14 @@ const styles = StyleSheet.create({
   DurationdropDown: {
     width: 197,
     height: 56,
-    
+
     marginRight: 10,
     marginTop: 28,
   },
   UnitdropDown: {
     width: 131,
     height: 56,
-    
+
     marginTop: 28,
   },
 
