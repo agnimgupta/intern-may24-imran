@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, StyleSheet, View} from 'react-native';
-import Colors from '../Constants/Colors';
+import Colors from '../../Constants/Colors';
 
 const HomeScreen = ({navigation}) => {
   return (

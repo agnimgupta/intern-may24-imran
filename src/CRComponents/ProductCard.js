@@ -9,7 +9,7 @@ const ProductCard = () => {
         <Image
           style={styles.img}
           source={{
-            uri: 'https://s3-alpha-sig.figma.com/img/ca79/a101/f3dd61c66889f4114c63e74b665e5683?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b8zSUiHWed6cZnYZYL6K2DZCmRVSkjDlm~Nl0RRVWdJMHr1gGM6Qwbys9k6fuecbDpoFwGvUKR9kpFhx5TL0cB86yqn8myL2Wv3UVXJNlsizmGSQ10Fg4Ae2B9N~DwdP9Zg9HeszcaDDWJnrU~b4LWwjSA8eXcnyNYOfUOfajm963HpKcTXhZOF5HVDZyM4TxmS9Lp8Vc7XiywNM6tStAa4f4DL9LLTeCysRpPoEAYVGbhJciUNB4oRdBvC-lI5AC5ng4dcDi-fUQut2553bgM9s6XkXJF1SyEF2kU-xHzECf9TYLtmhR2I8iFOiwQOhgaJm5MkDz3bDBR5jmzVMwA__',
+            uri: 'https://cdn.shopify.com/s/files/1/0645/9650/8925/files/Kuntal-Care-Malt-1-min-1024x1024_a790e3f8-c325-442b-ba84-45cca12d8230_480x480.jpg?v=1662732905',
           }}
         />
       </View>

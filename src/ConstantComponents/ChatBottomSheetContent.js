@@ -19,7 +19,7 @@ const ChatBottomSheetContent = ({ navigation }) => {
         <MainButton
           ButtonTitle="Assign Routine"
           onPress={() => {
-            navigation.navigate("VideoToAssignRoutine");
+           navigation.navigate("VideoToAssignRoutine");
           }}
         />
       </View>

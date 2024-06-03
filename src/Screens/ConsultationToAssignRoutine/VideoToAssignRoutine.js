@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {StyleSheet, View} from 'react-native';
 import InfoContainer from '../../ConstantComponents/InfoContainer';
 import ProfileCard from '../../ConstantComponents/ProfileCard';
-import CustomDropDown from '../../ConstantComponents/CustomDropDown';
 import ExplainTextInput from '../../ConstantComponents/ExplainTextInput';
 import MainButton from '../../ConstantComponents/MainButton';
-const VideoToAssignRoutine = () => {
+const VideoToAssignRoutine = ({navigation}) => {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleSelect = item => {
