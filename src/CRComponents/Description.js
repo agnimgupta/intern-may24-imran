@@ -5,25 +5,12 @@ const Description = () => {
   return (
     <View style={styles.mainContainer}>
       <View style={{marginTop: 10, marginBottom: 10, left: 10, width: 280}}>
-        <View style={styles.ContentContainer}>
-          {/* <Text
-            style={styles.subText}
-          >{`\u25AA  Your own personalization routine ldkfnslkdgndk sgnlsdkglsdkn `}</Text>
-        </View>
-
-        <View style={styles.ContentContainer}>
-          <Text
-            style={styles.subText}
-          >{`\u25AA  Your own personalization routine ldkfnslkdgndk sgnlsdkglsdkn `}</Text>
-        </View>
-        <View style={styles.ContentContainer}>
-          <Text
-            style={styles.subText}
-          >{`\u25AA  Your own personalization routine ldkfnslkdgndk sgnlsdkglsdkn `}</Text> */}
+        <View style={styles.contentContainer}>
           <TextInput
             style={styles.textInput}
             placeholder="add description"
             placeholderTextColor="black"
+            multiline={true} 
           />
         </View>
       </View>
@@ -45,7 +32,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 28,
   },
-
   wordCount: {
     color: '#B6B6B6',
     fontSize: 10,
@@ -62,27 +48,18 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     fontFamily: 'Nunito-Regular',
   },
-
-  ContentContainer: {
+  contentContainer: {
     width: 314,
     alignContent: 'flex-start',
     marginBottom: 5,
   },
-
-  // subText: {
-  //   fontFamily: 'Nunito-Regular',
-  //   color: Colors.neutrals800,
-  //   fontWeight: '400',
-  //   fontSize: 14,
-  //   color: '#1D1B20',
-  // },
-
   textInput: {
     width: '100%',
     height: '100%',
     textAlignVertical: 'top',
     textAlign: 'left',
     color: 'black',
+    padding: 10,         
   },
 });
 

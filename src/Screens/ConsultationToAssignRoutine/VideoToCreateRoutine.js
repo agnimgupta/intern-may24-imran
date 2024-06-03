@@ -8,21 +8,21 @@ const VideoToCreateRoutine = () => {
     <View style={styles.mainContainer}>
       <View style={styles.headerCont}>
         <Text style={styles.headerText}>
-          Assign a routine to Geetanjali? Assign through your pre build Routines{' '}
+          Assign a routine to Geetanjali? Assign through your pre build Routines
         </Text>
       </View>
 
       <View style={styles.CardContainer}>
         <PreBuildRoutineCard
           img={{
-            uri: 'https://s3-alpha-sig.figma.com/img/594b/93d0/a264eb0a338581295bfa901ae6a6fd8a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OeVaDCBS7xHFWdKh2fnlcVdVCd2lITGXabveUfTIlXhuekgBxdhQRQm9Ike8Z8b0AWRLNhf7RgCNp0~TVY7HOXFedk9E1ZeY-B6bh6imJIWwnSED~D~zIIp~wQdRpmNbS7hOy6ZrgOCSqN5sLC6eWHA39MVCQVnQdmvtphMiU-u~x53JMwVFcrl4dQHDBilW9saS3ofAJqKU-UEbIZHuCLXhE22TEeA6qQjK6FiqbnYz570JQtNskd1eXhAW8JfZft0Oj8Pp5ykYRHCH1V7lddlOAx81DHfvHdYdpG-YmsRX624RIUuGCHn5dLEtVGgeSC50vWsS0cAFwVmRrdZi7Q__',
+            uri: 'https://images.unsplash.com/photo-1599847954335-d7c7ca35f6a7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
           }}
           title="Skin Care"
           tltReminder="3 Reminder Items"
         />
         <PreBuildRoutineCard
           img={{
-            uri: 'https://s3-alpha-sig.figma.com/img/58bc/add6/d3c30fe9523ef330392f4e82be89f155?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PibZ~ANd8m7FlNu35dN970GSEfl~Z~kfLOejawU2OMIqFXTLVSXhYmqQiCpFWMAogpe69BSiF5HVk57SgusVc28vni1DqMcfhbrUOpFQMC51NNS76uXco2IAAqnZij3VVWE3YTn~JdZoahf4ySOa8DPwdcjQleMSV0ej6v-5jK1LJ82VPkUeUKjrt-iLvsqVcmAAcPj1oE69nZLcwah2DEhn0jgoHaRzKQoNnx-0FrNQszrXURUg38y9zgWtv~LSZbxZukrnCyZmLLmKDljzzpladMBEZ46gZVGa2x1kz6AvUw4U1mJ0lOYtZKpgB5hcuOkHZhBEbn7DkEaBlqDOYQ__',
+            uri: 'https://i.pinimg.com/736x/42/3c/d0/423cd08b2b609ca66c28a071dd05c3c1.jpg',
           }}
           title="Skin Care"
           tltReminder="1 Reminder Items"

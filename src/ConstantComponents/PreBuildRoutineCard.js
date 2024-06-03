@@ -90,6 +90,7 @@ const styles = StyleSheet.create({
     fontFamily: "Nunito-SemiBold",
     marginBottom: 10,
     marginRight: 10,
+    color:'#212529'
   },
 
   ContentCont: {

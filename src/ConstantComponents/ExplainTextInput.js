@@ -9,6 +9,7 @@ const ExplainTextInput = () => {
           style={styles.textInput}
           placeholder="Explain “Geetanjali Shah” about the Concern"
           placeholderTextColor="black"
+          multiline={true}
         />
       </View>
 
@@ -27,18 +28,18 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     marginTop: 28,
+    paddingLeft: 5,
+    paddingRight: 5,
   },
 
   textInput: {
-    // height: "25%",
-    // width: "100%",
+   
     marginTop: 10,
     paddingLeft: 14,
     paddingRight: 14,
     color: 'black',
     fontWeight: '400',
-    fontSize: 10,
-    fontFamily: 'Nunito-Light',
+    fontSize: 12,
   },
 
   wordCount: {

@@ -37,7 +37,7 @@ const Step1 = () => {
               style={styles.image}
               source={{
                 uri: 'https://s3-alpha-sig.figma.com/img/d481/456c/c606407a1dbabfe086b8c1425885ca7a?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=BohVlYCaT9rw3EMRZq4MfEjfKjD-8LhGpsSUfv3quJX~XSaXCNn5jT0PCJ0G5iKksGFGc9lo2RAlQVV2q8KGDmiSinXCuk5-auVlR22cGueNE2bmYDkFAVTw-4dK2IKii4oWLF3ryjQ6s~sIgqCM0m5cfFkuY5j1eOqqMqcoyXJ1cjkb1zd7qAi~-IxQ~Ox3VKLuS~lB-hx3U01PzGvSSBpybz5u9QS6ZOCBGEXspS3We7Xag9tkz8W79Fq8Un1z5K5UXMR-fgOdhYo4dpuKFFZgvvCW-0hEXI2xbcDG1ZHrJhMkfIbZKj6iv0zHbdrrlXU3fWV7TYa6zwTm7f~3uQ__',
-              }} // Replace with your image URL
+              }} 
             />
           </View>
         </TouchableOpacity>
@@ -68,7 +68,7 @@ const Step1 = () => {
               style={styles.image}
               source={{
                 uri: 'https://s3-alpha-sig.figma.com/img/13df/8e96/c500c79ac6343022edf55f7946901f7e?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dtZvhgf8s6PpuVzhNcnz-JQp6xMuK6M5N4r7-Ei-stftX1cWdNBxUgeGVNAQwIdRw77RadkJW~PdYEOpRPiW9Id3NX7xp87nE~8k94ZC-DhAkjWv9EJFK2xcKWleRZ1qWGFVPIb-YRHk6aLjkWSj-2BnLpNkZbsR~lZjo4ytn3gDwWPIEmyOqwj~abUA~~TWNoS3j343b6MPybu680X4jAq9aicYHFSi83rxXaiXntOgTadbJ0VU4yj0ypFCGgq9OT68HDXoi32HqfjK5c18I~uaG1xPR9Y0xGxpJRLVH~NjEfCrcWdYr42MVoW1Xrv1~kcRThqjvxoxCd7i5352zA__',
-              }} // Replace with your image URL
+              }} 
             />
           </View>
         </TouchableOpacity>
